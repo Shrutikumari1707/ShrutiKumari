@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <style>
+         nav a.sitename{
+            flex:1;
+            text-align: left;
+        }
+        header {
+            padding: 10px;
+            margin-bottom: 1px;
+        }
+        .container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 10px;
+
+	}
+
+        nav {
+            display: flex;
+            justify-content: safe;
+            align-items: center;
+            padding: 5px;
+            margin:auto;
+            background-color:#b596f5;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+.footer-text {
+		background-color:  #a18e8e;
+		padding: 20px;
+		text-align: center;
+		border: 1p;
+		color: #160404;
+	}
+        nav a.sitename{
+            flex:1;
+            text-align: left;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium';
+            font-weight: bolder;
+            color: rgb(11, 0, 0);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        nav a.contact:hover {
+            background-color: #ede9e9;
+        }
+
+        nav a.contact:active {
+            background-color: #58f158;
+        }
+        .container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 10px;
+		background-image: url(bg.jpg);
+	}
+    .table{
+        width: 100px;
+        height: 100px;
+        border: 1px;
+    } 
+    </style>
+</head>
+<body style="background-color: rgb(214, 214, 212);">
+    <header>
+        <nav>
+                <img src="artlogo.jpg" alt="Logo" class="logo">
+                <a href="w1A1.html" class="sitename"><p>PAINT WORLD</p></a>
+       </nav>
+    </header>
+    <div class="container">
+        <div class="container" style="text-align: center; background-color: rgb(99, 15, 208);">
+            WELCOME TO THE WORLD OF ARTISTS
+        </div><br>
+        <div>
+            
+        </div><br>
+        <div>
+            SUBMIT FORM
+            <br><br>
+            <form action = "javascript:submitForm()" onSubmit = "return validate()">
+                <table class="table" >
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" placeholder="e.g shruti" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email Id:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="Required" required><span id="emailerr"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="genre">Favorite art:</label></td>
+                        <td><input list="genre" name="genre" id="genre" placeholder="tap to see" required></td>
+                    </tr>
+                        <datalist id="genre">
+                            <option value="Face painting"></option>
+                            <option value="oil painting"></option>
+                            <option value="portrait"></option>
+                            <option value="madela art"></option>
+                            <option value="diamond art"></option>
+                        </datalist>
+                </table>
+                <br>
+                <input type="checkbox" id="myCheckbox" name="myCheckbox" checked value="yes" required>
+                <label for="myCheckbox">turn on notification</label>
+                <br><br>
+                <input type="submit" name="submit" value="submit" style="align-items: center;background-color: #58f158;" >
+
+            </form>
+            <script>
+               
+               function validate() {
+        let validated = true;
+        let ele1 = document.getElementById("name");
+        if (ele1.value.length < 3) {
+          window.alert("Name must contain atleast 3 characters");
+          validated = false;
+        } 
+        return validated;
+        const form = document.getElementById('myForm');
+	const nameInput = document.getElementById('name');
+	const emailInput = document.getElementById('email');
+
+	form.addEventListener('submit', function(event) {
+		if (nameInput.value.trim() === '' || emailInput.value.trim() === '') {
+			event.preventDefault();
+			alert('Please fill in all required fields!');
+		}
+	});
+
+      }
+      function submitForm() {
+        window.alert("Form Submitted");
+      }
+  
+                
+              </script>
+            
+        </div>
+    </div>
+    <div class="footer-text">
+		<p>All rights are reversed</p>
+	</div>
+</body>
+</html>
